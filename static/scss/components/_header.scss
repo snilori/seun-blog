@@ -1,0 +1,34 @@
+.header {
+    
+  @media (max-width: 1200px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &__container {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+    width: 100%;
+    max-width: 1144px;
+  }
+
+  &__nav {
+    margin-left: auto;
+
+    &__list {
+      display: flex;
+      align-items: center;
+      margin-top: 41px;
+      gap: 30px;
+    }
+
+    &__link {
+      cursor: pointer;
+
+      &:hover {
+        opacity: 80%;
+      }
+    }
+  }
+}
