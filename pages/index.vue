@@ -73,7 +73,9 @@
 
             <section class="pagination">
                 <div class="pagination__container">
-                    <button @click.prevent="loadMore" class="pagination__button">Load more</button>
+                    <button @click.prevent="loadMore" :disabled="fetchingMore" class="pagination__button">
+                        {{ fetchingMore ? "Loading..." : "Load More" }}
+                    </button>
                 </div> 
             </section>
 
@@ -100,6 +102,7 @@ export default {
         return {
             fetchingRecords: true,
             currentPage: 1,
+            fetchingMore: false,
         };
     },
 
@@ -135,7 +138,7 @@ export default {
                 customizations: {
                     title: "Blog App",
                     description: "",
-                    logo: "https://flutterwave.com/images/logo-colored.svg",
+                    logo: "",
                 },
                 callback: this.makePaymentCallback,
                 onclose: this.paymentModalClose,
@@ -157,10 +160,10 @@ export default {
             }
         },
         async loadMore() {
-            this.fetchingRecords = true;
+            this.fetchingMore = true;
             this.currentPage += 1;
             await this.$store.dispatch("blogs/fetchBlogs", this.currentPage);
-            this.fetchingRecords = false;
+            this.fetchingMore = false;
         },
     },
 };

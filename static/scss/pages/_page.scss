@@ -18,10 +18,23 @@
     padding: 8px;
     margin-bottom: 60px;
 
+    
+
+    
     @media (max-width: 1024px) {
+      gap: 15.5px;
+      max-width: 802px
+    }
+
+    @media (max-width: 768px) {
+      max-width: 601px
+    }
+
+    @media (max-width: 425px) {
       flex-wrap: wrap;
       padding: 0;
     }
+
   }
 
   &__picture{
@@ -32,6 +45,10 @@
   &__content{
     max-width: 612.5px;
     width: 100%;
+
+    @media (max-width: 1024px) {
+      max-width: 600px;
+    }
   }
 
   &__small__heading {

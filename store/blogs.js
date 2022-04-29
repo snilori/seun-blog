@@ -22,10 +22,9 @@ export const mutations = {
 };
 
 export const actions = {
-  async fetchBlogs({ commit }, page) {
-    console.log({ page });
+  async fetchBlogs({ commit }, pageNumber) {
     let response = await this.$axios.$get(
-      `https://techcrunch.com/wp-json/wp/v2/posts?page=${page}`
+      `https://techcrunch.com/wp-json/wp/v2/posts?page=${pageNumber}`
     );
     
     const blogs = response;
