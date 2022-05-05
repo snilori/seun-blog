@@ -56,7 +56,8 @@
       font-weight: 700;
       font-size: 12px;
       line-height: 14px;
-      color: #4b4b4b;
+      color: #4b4b4b; 
+
     }
 
     &__date {
@@ -75,6 +76,11 @@
     margin-top: 8px;
     max-width: 463px;
     width: 100%;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   &__main__body {
@@ -85,6 +91,11 @@
     margin-top: 8px;
     max-width: 603px;
     width: 100%;
+
+    @media (max-width: 768px) {
+      font-size: 10px;
+      line-height: 14px;
+    }
   }
 
   &__footer {
@@ -131,11 +142,20 @@
   text-align: center;
   margin-top: 169px;
 
+  @media (max-width: 768px) {
+    margin-top: 60px;
+  }
+
   &__heading {
     font-weight: 500;
     font-size: 32px;
     line-height: 38px;
     color: #2c2c2c;
+
+    @media (max-width: 768px) {
+      font-size: 22px;
+      line-height: 26px;
+    }
   }
 
   &__body {
@@ -148,6 +168,11 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 24px;
+    }
   }
 
   &__button {
@@ -159,6 +184,11 @@
     padding: 12px 55px;
     border: 0;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
 
     &:hover {
       color: darkgray
@@ -184,6 +214,11 @@
   justify-content: center;
   margin-top: 40px;
 
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
+  
+
   &__button{
     color: #ffffff;
     background-color: #000000;
@@ -191,5 +226,7 @@
     outline: 0;
     padding: 10px 40px;
     cursor: pointer;
+    font-size: 12px;
+    line-height: 16px;
   }
 }
